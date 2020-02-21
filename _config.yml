@@ -24,7 +24,9 @@ url: "https://wavebeans.io" # the base hostname & protocol for your site, e.g. h
 
 # Build settings
 markdown: kramdown
+remote_theme: pmarsceill/just-the-docs # for github pages
 theme: "just-the-docs"
+
 
 # Theme properties: https://pmarsceill.github.io/just-the-docs/docs/configuration/
 logo: "/assets/wavebeans-logo-w-name.png"
