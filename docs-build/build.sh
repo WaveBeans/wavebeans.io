@@ -21,9 +21,9 @@ kotlinc builder.kt -include-runtime -d builder.jar
 alias builder="java -jar builder.jar"
 
 # build docs from wavebeans sources
-builder $(pwd)/wavebeans/docs/user/lib  $(pwd)/../docs/api/
-builder $(pwd)/wavebeans/docs/user/cli  $(pwd)/../docs/cli/
-builder $(pwd)/wavebeans/docs/user/exe  $(pwd)/../docs/exe/
+builder $(pwd)/wavebeans/docs/user/lib  $(pwd)/../docs/api/ 3
+builder $(pwd)/wavebeans/docs/user/exe  $(pwd)/../docs/exe/ 4
+builder $(pwd)/wavebeans/docs/user/cli  $(pwd)/../docs/cli/ 5
 
 # clean
 rm builder.jar

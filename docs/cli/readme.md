@@ -1,6 +1,7 @@
 ---
 layout: default
 title: # WaveBeans CLI
+nav_order: 5
 ---
 # WaveBeans CLI
 

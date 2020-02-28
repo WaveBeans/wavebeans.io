@@ -2,6 +2,7 @@
 layout: default
 title: WaveBeans API reference
 has_children: true
+nav_order: 3
 ---
 WaveBeans API reference
 ==========

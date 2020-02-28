@@ -23,10 +23,15 @@ fun main(args: Array<String>) {
     else
         args[1]
 
+    val navOrder = if (args.isEmpty()) 
+        0
+    else
+        args[2].toInt()
+
     println("""
-    Running with parameters:
-        baseDirectory=$baseDirectory
-        outputDirectory=$outputDirectory
+        Running with parameters:
+            baseDirectory=$baseDirectory
+            outputDirectory=$outputDirectory
         ============
     """.trimIndent())
 
@@ -72,6 +77,7 @@ fun main(args: Array<String>) {
             if (parent != null) content += "parent: ${parent.header}"
             if (grandParent != null) content += "grand_parent: ${grandParent.header}"
             if (hasChildren) content += "has_children: true"
+            if (parent == null && grandParent == null) content += "nav_order: $navOrder"
             content += "---"
             content += file.file.readLines()
 
