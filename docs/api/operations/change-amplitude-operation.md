@@ -2,7 +2,7 @@
 layout: default
 title: Change amplitude operation
 parent: Operations
-grand_parent: WaveBeans API reference
+grand_parent: API reference
 ---
 Change amplitude operation
 ========

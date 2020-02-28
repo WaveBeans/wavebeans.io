@@ -2,10 +2,23 @@
 layout: default
 title: Window operation
 parent: Operations
-grand_parent: WaveBeans API reference
+grand_parent: API reference
 ---
 Window operation
 =====
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Overview](#overview)
+- [Attributes of the window](#attributes-of-the-window)
+- [Output](#output)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+Overview
+--------
 
 Window operation is not a [window function](https://en.wikipedia.org/wiki/Window_function) yet but predecessor of that operation. This function allows you to group a bunch of samples together and then move over the stream evenly. That function is something that you will use to run an [FFT analysis](fft-operation.md) after, and many other things you'll be able to do with a set of samples while processing the stream.
 
@@ -45,7 +58,8 @@ input { (idx, _) -> idx.toInt() } // create a BeanStream<Int>
         .window(128) { 0 } // create a window over that stream, specifying the zero element function.
 ```
 
-**Attributes of the window**
+Attributes of the window
+----------
 
 As was mentioned above, the window has two main characteristics: `size` and `step`. Both of them can be found inside the `Window<T>` object, also there are other things you may find useful:
 
@@ -61,6 +75,7 @@ A following operations you may use over the windowed stream:
 * [projection](projection-operation.md) -- projection over the any windowed stream is built-in however don't forget to register your type calculator for a non-built-in types, it is called internally.
 * [FFT analysis](fft-operation.md) -- run an FFT analysis over the stream.
 
-**Output**
+Output
+-------
 
 The window operation mainly is used as interim operation and allows to perform further analysis, so it has no builtin outputs, however you may define your [own CSV output](../outputs/csv-outputs.md#user-defined-csv-output) if that is required.

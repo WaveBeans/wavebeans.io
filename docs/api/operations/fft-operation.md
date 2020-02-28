@@ -2,10 +2,23 @@
 layout: default
 title: FFT operation
 parent: Operations
-grand_parent: WaveBeans API reference
+grand_parent: API reference
 ---
 FFT operation
 ==========
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Overview](#overview)
+- [FFT Sample](#fft-sample)
+- [Storing to CSV](#storing-to-csv)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+Overview
+--------
 
 Within WaveBeans library you may do an FFT analysis on the stream. To start an FFT stream you need first to convert Sample stream (`BeanStream<Sample>`) to windowed sampled stream (`BeanStream<Window<Sample>>`) using [window operation](window-operation.md) and that sample array will be an input of the FFT stream. The size of the FFT you'll define when creating the FFT stream, it should be the power of 2 and larger then the size of the underlying window.
 
@@ -25,7 +38,8 @@ Let's get an example:
 
 That stream will calculate FFT based on 401 samples, but before FFT calculation it will be aligned with zero-padding to 512 samples. And each 401 samples of source stream will return one FFT sample, and while stream lasts it generates the stream of FFT samples -- `BeanStream<FftSample>`, in fact it generates forward [STFT](https://en.wikipedia.org/wiki/Short-time_Fourier_transform).
 
-**FFT Sample**
+FFT Sample
+--------
 
 `io.wavebeans.lib.stream.fft.FftSample` is a complex object that provides access to needed FFT calculations. Out of it you can get:
 1. `time` -- time marker of the sample;
@@ -51,6 +65,7 @@ In the stream you may run further analysis, for example using [`map()` operation
     .map { it.magnitude().drop(it.bin(440.0)).first() }
 ``` 
 
-**Storing to CSV**
+Storing to CSV
+---------
 
 Stream of FFT samples support [output to CSV](../outputs/csv-outputs.md).

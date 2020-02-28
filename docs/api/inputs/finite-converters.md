@@ -2,7 +2,7 @@
 layout: default
 title: Finite converters
 parent: Inputs
-grand_parent: WaveBeans API reference
+grand_parent: API reference
 ---
 Finite converters
 =========

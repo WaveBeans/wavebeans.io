@@ -100,7 +100,8 @@ fun index(baseDirectory: File, file: File) {
     } else {
         val relPath = baseDirectory.toPath().relativize(file.toPath()).toString()
         if (file.name.endsWith(".md")) {
-            val header = file.readLines().firstOrNull { it.trim().isNotEmpty() } ?: "NONE"
+            val header = (file.readLines().firstOrNull { it.trim().isNotEmpty() || it.trim().startsWith("# ") } ?: "NONE")
+                .removePrefix("# ")
             index[relPath.toLowerCase()] = FileIndex(file, header, relPath, false)
         } else {
             index[relPath.toLowerCase()] = FileIndex(file, "", relPath, true)

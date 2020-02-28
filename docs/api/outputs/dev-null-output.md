@@ -2,7 +2,7 @@
 layout: default
 title: Dev-null output
 parent: Outputs
-grand_parent: WaveBeans API reference
+grand_parent: API reference
 ---
 Dev-null output
 =======

@@ -2,7 +2,7 @@
 layout: default
 title: Zero-element
 parent: Operations
-grand_parent: WaveBeans API reference
+grand_parent: API reference
 ---
 Zero-element
 ========
