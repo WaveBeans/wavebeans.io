@@ -3,7 +3,6 @@ layout: default
 title: Projection operation
 parent: Operations
 grand_parent: WaveBeans API reference
-has_children: true
 ---
 Projection operation
 ========

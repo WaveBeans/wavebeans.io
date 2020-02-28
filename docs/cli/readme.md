@@ -1,7 +1,6 @@
 ---
 layout: default
 title: # WaveBeans CLI
-has_children: true
 ---
 # WaveBeans CLI
 

@@ -3,7 +3,6 @@ layout: default
 title: Trim operation
 parent: Operations
 grand_parent: WaveBeans API reference
-has_children: true
 ---
 Trim operation
 =======

@@ -3,7 +3,6 @@ layout: default
 title: Function as an Input
 parent: Inputs
 grand_parent: WaveBeans API reference
-has_children: true
 ---
 Function as an Input
 ========

@@ -3,7 +3,6 @@ layout: default
 title: WAV-file output
 parent: Outputs
 grand_parent: WaveBeans API reference
-has_children: true
 ---
 WAV-file output
 =========

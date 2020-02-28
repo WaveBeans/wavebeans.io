@@ -2,7 +2,6 @@
 layout: default
 title: User defined functions
 parent: WaveBeans API reference
-has_children: true
 ---
 User defined functions
 ========

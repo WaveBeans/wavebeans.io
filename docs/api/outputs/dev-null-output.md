@@ -3,7 +3,6 @@ layout: default
 title: Dev-null output
 parent: Outputs
 grand_parent: WaveBeans API reference
-has_children: true
 ---
 Dev-null output
 =======

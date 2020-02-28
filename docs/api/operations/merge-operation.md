@@ -3,7 +3,6 @@ layout: default
 title: Merge operation
 parent: Operations
 grand_parent: WaveBeans API reference
-has_children: true
 ---
 Merge operation
 ========

@@ -23,7 +23,12 @@ fun main(args: Array<String>) {
     else
         args[1]
 
-    println
+    println("""
+    Running with parameters:
+        baseDirectory=$baseDirectory
+        outputDirectory=$outputDirectory
+        ============
+    """.trimIndent())
 
     index(baseDirectory, baseDirectory)
     
@@ -32,22 +37,32 @@ fun main(args: Array<String>) {
     index.entries.forEach { e ->
         val file = e.value
         val docFile = File(outputDirectory + file.relPath)
+        docFile.getParentFile().mkdirs()
         if (file.isSupportFile) {
-            println("Support file $file")
+            println("""
+            Support file $file
+            ============
+            """.trimIndent())
             val content = file.file.readBytes()
             docFile.writeBytes(content)
         } else {
             val filePath = File(e.key).toPath()
             val parent = parentOf(file.file, filePath)
             val grandParent = if (filePath.nameCount > 1) parentOf(file.file, filePath.subpath(0, filePath.nameCount - 1)) else null
+
+            val hasChildren = index.entries
+                .map { parentOf(it.value.file, File(it.key).toPath()) }
+                .filter { it?.file == file.file }
+                .any()
+
             println("""
                 for $file 
                     parent is $parent
-                    grand parent is $grandParent
+                    grandParent is $grandParent
+                    hasChildren is $hasChildren
                 ============
             """.trimIndent())
 
-            val docFile = File(outputDirectory + file.relPath)
             docFile.getParentFile().mkdirs()
             docFile.createNewFile()
             val content = mutableListOf<String>()
@@ -56,7 +71,7 @@ fun main(args: Array<String>) {
             content += "title: ${file.header}"
             if (parent != null) content += "parent: ${parent.header}"
             if (grandParent != null) content += "grand_parent: ${grandParent.header}"
-            content += "has_children: true"
+            if (hasChildren) content += "has_children: true"
             content += "---"
             content += file.file.readLines()
 
@@ -77,7 +92,7 @@ fun index(baseDirectory: File, file: File) {
     if (file.isDirectory()) {
         file.listFiles().forEach { index(baseDirectory, it) }
     } else {
-            val relPath = baseDirectory.toPath().relativize(file.toPath()).toString()
+        val relPath = baseDirectory.toPath().relativize(file.toPath()).toString()
         if (file.name.endsWith(".md")) {
             val header = file.readLines().firstOrNull { it.trim().isNotEmpty() } ?: "NONE"
             index[relPath.toLowerCase()] = FileIndex(file, header, relPath, false)
