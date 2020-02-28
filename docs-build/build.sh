@@ -5,7 +5,7 @@
 # > brew install kotlin
 
 WAVEBEANS_REPO=git@github.com:WaveBeans/wavebeans.git
-VERSION=docs-layout
+VERSION=master
 
 # clean
 rm -rf wavebeans
