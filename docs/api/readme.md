@@ -43,6 +43,7 @@ There a few different types of inputs, you may read more in specific:
 * [sine](inputs/sines.md)
 * [wav-files](inputs/wav-file.md)
 * [custom defined function](inputs/function-as-input.md)
+* [lists and collections](inputs/list-as-input.md)
 
 Also, as all streams in WaveBeans considered to be infinite, there is extra functionality to convert finite streams like wav-files, read more about [finite converters](inputs/finite-converters.md)
 
@@ -75,7 +76,8 @@ Here is the list of supported outputs at the moment:
 
 * [CSV](outputs/csv-outputs.md)
 * [WAV](outputs/wav-output.md) 
-* [/dev/null](outputs/dev-null-output.md)  
+* [/dev/null](outputs/dev-null-output.md)
+* [Memory Table](outputs/table-output.md)  
 
 ## Operations
 

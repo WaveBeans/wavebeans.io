@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Inputs
+title: Types
 parent: API reference
 grand_parent: API reference
 has_children: true
 ---
-Inputs
+Types
 ========
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->

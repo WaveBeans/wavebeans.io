@@ -24,6 +24,7 @@ alias builder="java -jar builder.jar"
 builder $(pwd)/wavebeans/docs/user/lib  $(pwd)/../docs/api/ 3
 builder $(pwd)/wavebeans/docs/user/exe  $(pwd)/../docs/exe/ 4
 builder $(pwd)/wavebeans/docs/user/cli  $(pwd)/../docs/cli/ 5
+builder $(pwd)/wavebeans/docs/user/http  $(pwd)/../docs/http/ 6
 
 # clean
 rm builder.jar

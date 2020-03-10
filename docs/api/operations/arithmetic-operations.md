@@ -11,9 +11,8 @@ Arithmetic operations
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [Arithmetic operations](#arithmetic-operations)
-  - [Sample stream operations](#sample-stream-operations)
-  - [Windowed sample stream operations](#windowed-sample-stream-operations)
+- [Sample stream operations](#sample-stream-operations)
+- [Windowed sample stream operations](#windowed-sample-stream-operations)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

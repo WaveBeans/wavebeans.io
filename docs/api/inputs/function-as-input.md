@@ -11,8 +11,8 @@ Function as an Input
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [Function as an Input](#function-as-an-input)
-  - [Syntax](#syntax)
+- [Syntax](#syntax)
+- [Low-level API](#low-level-api)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -94,7 +94,8 @@ input(InputFn(440.0, 1.0)) // or just specifying both of the parameters one by o
 
 That approach is more cumbersome but very flexible as you basically can do whatever you want and even call third party libraries methods.
 
-**Low-level API**
+Low-level API
+-------
 
 As any input that one has lower level API which is just class `Input<T>`, where `T` is the type of the produced output. Also it works with instances of `Fn` only, so you have two ways to instantiate it:
 

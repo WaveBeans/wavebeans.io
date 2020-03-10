@@ -7,6 +7,17 @@ parent: WaveBeans
 Release notes
 =========
 
+Version 0.0.2 on 2020-03-10
+------
+
+* CLI: Using kotlinc to compile script.
+* Documentation: restructured to publish on [wavebeans.io](https://wavebeans.io)
+* HTTP API: introduced [HTTP interface](/docs/http/readme.html) for accessing internal resources
+* Table: added [querying](/docs/api/outputs/table-output.html#querying) over HTTP API
+* Inputs: using [List as input](/docs/api/inputs/list-as-input.html)
+* Operations: merge operation can [merge streams of different types](/docs/api/operations/merge-operation.html#using-with-two-different-input-types)
+* Output: writing samples to in-memory [table](/docs/api/outputs/table-output.html) for later [querying](/docs/api/outputs/table-output.html#querying)
+
 Version 0.0.1 on 01/31/2020
 ------
 
