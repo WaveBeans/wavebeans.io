@@ -28,10 +28,10 @@ git checkout $VERSION
 cd ../
 
 # build docs from wavebeans sources
-builder $(pwd)/wavebeans/docs/user/lib  $(pwd)/../docs/api/ 3
-builder $(pwd)/wavebeans/docs/user/exe  $(pwd)/../docs/exe/ 4
-builder $(pwd)/wavebeans/docs/user/cli  $(pwd)/../docs/cli/ 5
-builder $(pwd)/wavebeans/docs/user/http  $(pwd)/../docs/http/ 6
+builder --base=$(pwd)/wavebeans/docs/user/lib --output=$(pwd)/../docs/api/ --nav-order=3 --support-extensions=png
+builder --base=$(pwd)/wavebeans/docs/user/exe --output=$(pwd)/../docs/exe/ --nav-order=4 --support-extensions=png
+builder --base=$(pwd)/wavebeans/docs/user/cli --output=$(pwd)/../docs/cli/ --nav-order=5 --support-extensions=png
+builder --base=$(pwd)/wavebeans/docs/user/http --output=$(pwd)/../docs/http/ --nav-order=6 --support-extensions=png
 
 ### blog
 
@@ -43,8 +43,8 @@ git checkout $BLOG_VERSION
 rm -rf podcast-use-case # temporary remove it, do not publish yet
 cd ../
 
-# build articles 
-builder $(pwd)/wave-blog  $(pwd)/../blog/ 2
+# build blog 
+builder --base=$(pwd)/wave-blog --output=$(pwd)/../blog/ --nav-order=2 --support-extensions=png
 
 ### clean
 rm builder.jar
