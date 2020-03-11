@@ -3,6 +3,7 @@ layout: default
 title: Week 1. Basics of Audio processing
 parent: Audio Signal Processing Course
 grand_parent: Blog
+nav_order: 2
 ---
 Week 1. Basics of Audio processing
 ============

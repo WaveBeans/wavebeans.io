@@ -31,14 +31,17 @@ fun main(args: Array<String>) {
         Running with parameters:
             baseDirectory=$baseDirectory
             outputDirectory=$outputDirectory
+            navOrder=$navOrder
+            validSupportFileExtensions=$validSupportFileExtensions
+            debug=$debug
         ============
     """.trimIndent())
 
     index(baseDirectory, baseDirectory, validSupportFileExtensions)
     
     File(outputDirectory).delete()
-
-    index.entries.forEach { e ->
+    val entries = index.entries.toMutableList().also { it.sortBy { it.key } }
+    entries.forEachIndexed { idx: Int, e: Map.Entry<String, FileIndex> ->
         val file = e.value
         val docFile = File(outputDirectory + file.relPath)
         docFile.getParentFile().mkdirs()
@@ -77,7 +80,12 @@ fun main(args: Array<String>) {
             if (parent != null) content += "parent: ${parent.header}"
             if (grandParent != null) content += "grand_parent: ${grandParent.header}"
             if (hasChildren) content += "has_children: true"
-            if (parent == null && grandParent == null) content += "nav_order: $navOrder"
+            if (parent == null && grandParent == null) 
+                content += "nav_order: $navOrder"
+            else 
+                // it's not fully correct but global index does the trick
+                // and keeps the alphabetic order as required.
+                content += "nav_order: $idx"
             content += "---"
             content += file.file.readLines()
 

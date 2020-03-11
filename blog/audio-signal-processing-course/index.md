@@ -3,6 +3,7 @@ layout: default
 title: Audio Signal Processing Course
 parent: Blog
 has_children: true
+nav_order: 1
 ---
 Audio Signal Processing Course
 ======

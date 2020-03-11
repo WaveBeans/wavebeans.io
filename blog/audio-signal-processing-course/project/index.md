@@ -3,6 +3,7 @@ layout: default
 title: Kotlin project reference implementation
 parent: Audio Signal Processing Course
 grand_parent: Blog
+nav_order: 0
 ---
 Kotlin project reference implementation
 =====

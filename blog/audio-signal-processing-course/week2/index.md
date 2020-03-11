@@ -3,6 +3,7 @@ layout: default
 title: Week 2. Discreate Fourier Transform
 parent: Audio Signal Processing Course
 grand_parent: Blog
+nav_order: 5
 ---
 Week 2. Discreate Fourier Transform
 ============

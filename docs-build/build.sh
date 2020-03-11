@@ -39,11 +39,10 @@ builder --base=$(pwd)/wavebeans/docs/user/http --output=$(pwd)/../docs/http/ --n
 git clone $WAVE_BLOG_REPO wave-blog
 cd wave-blog/
 git checkout $BLOG_VERSION
-
-rm -rf podcast-use-case # temporary remove it, do not publish yet
 cd ../
 
 # build blog 
+rm -rf wave-blog/podcast-use-case # temporary remove it, do not publish yet
 builder --base=$(pwd)/wave-blog --output=$(pwd)/../blog/ --nav-order=2 --support-extensions=png
 
 ### clean

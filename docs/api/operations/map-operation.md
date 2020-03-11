@@ -3,6 +3,7 @@ layout: default
 title: Map operation
 parent: Operations
 grand_parent: API reference
+nav_order: 10
 ---
 Map operation
 ========

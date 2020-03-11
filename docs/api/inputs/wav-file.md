@@ -3,6 +3,7 @@ layout: default
 title: WAV File input
 parent: Inputs
 grand_parent: API reference
+nav_order: 6
 ---
 WAV File input
 =======
