@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Outputs
+title: Inputs
 parent: API reference
-grand_parent: API reference
 has_children: true
+nav_order: 4
 ---
-Outputs
+Inputs
 ========
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->

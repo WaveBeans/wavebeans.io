@@ -3,6 +3,7 @@ layout: default
 title: Function as an Input
 parent: Inputs
 grand_parent: API reference
+nav_order: 2
 ---
 Function as an Input
 ========

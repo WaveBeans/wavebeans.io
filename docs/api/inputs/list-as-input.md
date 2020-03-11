@@ -3,6 +3,7 @@ layout: default
 title: List as Input
 parent: Inputs
 grand_parent: API reference
+nav_order: 3
 ---
 List as Input
 ========

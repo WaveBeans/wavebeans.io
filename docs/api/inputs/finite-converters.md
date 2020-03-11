@@ -3,6 +3,7 @@ layout: default
 title: Finite converters
 parent: Inputs
 grand_parent: API reference
+nav_order: 1
 ---
 Finite converters
 =========

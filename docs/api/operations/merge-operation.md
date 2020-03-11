@@ -3,6 +3,7 @@ layout: default
 title: Merge operation
 parent: Operations
 grand_parent: API reference
+nav_order: 11
 ---
 Merge operation
 ========
