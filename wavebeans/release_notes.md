@@ -10,7 +10,7 @@ Release notes
 Version 0.0.3 on 2020-04-03
 ------
 
-* Execution: **Breaking changes** `Overseer.eval()` now returns different type of result. Follow [docs](/docs/exe/readme.html)
+* Execution: **Breaking changes** `Overseer.eval()` now returns different type of result. Follow [execution documentation](/docs/exe/index.html).
 * CLI: Using Kotlin Scripting as main engine. No need to install Kotlin SDK anymore
 * Support of different [window functions](https://en.wikipedia.org/wiki/Window_function):
   * [Documentation](/docs/api/operations/map-window-function.html)
@@ -33,7 +33,7 @@ Version 0.0.2 on 2020-03-10
 
 * CLI: Using kotlinc to compile script.
 * Documentation: restructured to publish on [wavebeans.io](https://wavebeans.io)
-* HTTP API: introduced [HTTP interface](/docs/http/readme.html) for accessing internal resources
+* HTTP API: introduced [HTTP interface](/docs/http/index.html) for accessing internal resources
 * Table: added [querying](/docs/api/outputs/table-output.html#querying) over HTTP API
 * Inputs: using [List as input](/docs/api/inputs/list-as-input.html)
 * Operations: merge operation can [merge streams of different types](/docs/api/operations/merge-operation.html#using-with-two-different-input-types)

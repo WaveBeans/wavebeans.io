@@ -7,7 +7,7 @@ parent: WaveBeans
 Getting started
 ==========
 
-It's important to understand how you're about to use the WaveBeans, however if you're new to the tool the easiest way would be to use [command line tool](/docs/cli/readme.md) which provides comprehensive interface to the functionality and allows start working as soon as possible without deep dive.
+It's important to understand how you're about to use the WaveBeans, however if you're new to the tool the easiest way would be to use [command line tool](/docs/cli/index.html) which provides comprehensive interface to the functionality and allows start working as soon as possible without deep dive.
 
 Prerequisites
 --------
@@ -71,7 +71,7 @@ fun main() {
 }
 ```
 
-For more API capabilities follow [documentation](/docs/api/readme.html)
+For more API capabilities follow [documentation](/docs/api/index.html)
 
 Logging
 --------
