@@ -3,7 +3,7 @@ layout: default
 title: Outputs
 parent: API reference
 has_children: true
-nav_order: 20
+nav_order: 21
 ---
 Outputs
 ========

@@ -3,7 +3,7 @@ layout: default
 title: Memory table
 parent: Outputs
 grand_parent: API reference
-nav_order: 21
+nav_order: 22
 ---
 Memory table
 ======
