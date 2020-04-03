@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Requires kotlin to be installed:
-# > brew update kotlin
+# > brew update
 # > brew install kotlin
 
 WAVEBEANS_REPO=git@github.com:WaveBeans/wavebeans.git
