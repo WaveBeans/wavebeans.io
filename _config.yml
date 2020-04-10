@@ -37,7 +37,7 @@ aux_links:
 
 footer_content: "Copyright &copy; 2020 WaveBeans. Distributed under <a href=\"https://github.com/WaveBeans/wavebeans/blob/master/LICENSE\">Apache 2.0 License.</a>"
 
-color_scheme: "dark"
+# color_scheme: "dark"
 
 exclude: 
   - docs-build
