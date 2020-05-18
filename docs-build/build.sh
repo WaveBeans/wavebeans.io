@@ -33,6 +33,10 @@ builder --base=$(pwd)/wavebeans/docs/user/exe --output=$(pwd)/../docs/exe/ --nav
 builder --base=$(pwd)/wavebeans/docs/user/cli --output=$(pwd)/../docs/cli/ --nav-order=5 --support-extensions=png
 builder --base=$(pwd)/wavebeans/docs/user/http --output=$(pwd)/../docs/http/ --nav-order=6 --support-extensions=png
 
+# dev zone
+rm wavebeans/docs/dev/doing-release.md # that shouldn't be on web site
+builder --base=$(pwd)/wavebeans/docs/dev --output=$(pwd)/../devzone/ --nav-order=7 --support-extensions=png
+
 ### blog
 
 # fresh build
