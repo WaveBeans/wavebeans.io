@@ -3,7 +3,7 @@ layout: default
 title: Change amplitude operation
 parent: Operations
 grand_parent: API reference
-nav_order: 8
+nav_order: 9
 ---
 Change amplitude operation
 ========

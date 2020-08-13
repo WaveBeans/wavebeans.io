@@ -2,7 +2,7 @@
 layout: default
 title: User defined functions
 parent: API reference
-nav_order: 0
+nav_order: 1
 ---
 # User defined functions
 
@@ -13,6 +13,7 @@ nav_order: 0
 - [Function input and output type](#function-input-and-output-type)
 - [Lambda function](#lambda-function)
 - [Function as class](#function-as-class)
+  - [Extracting parameters](#extracting-parameters)
   - [FnInitParameters](#fninitparameters)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -79,8 +80,10 @@ class ChangeAmplitudeFn(parameters: FnInitParameters)  // there should be at lea
     constructor(factor: Double)                        // for convenience let's define  proper constructor
       : this(FnInitParameters().add("factor", factor)) // and build parameters for our function 
 
+    private val factor = initParams.double("factor")   // extracting the double value of the factor parameter,
+                                                       // it is better to do once
+
     override fun apply(argument: Sample): Sample {     // here is the body of the function
-        val factor = initParams.double("factor")       // extracting the double value of the factor parameter
         return argument * factor                       // and simply multiply sample by the specified factor,
                                                        // that changes its amplitude.
     }
@@ -88,6 +91,26 @@ class ChangeAmplitudeFn(parameters: FnInitParameters)  // there should be at lea
 
 // apply created function on the stream.
 stream.map(ChangeAmplitudeFn(2.0))
+```
+
+### Extracting parameters
+
+As [FnInitParameters](#fninitparameters) are being used to transfer the function arguments, it is not convenient to use that class every time you need something, so it's better to extract them as a variable or class properties. You always can extract them inside `apply()` method body, though from perfomance perspective it might be expensive in some cases. In this case class properties are preferrable way to do it.
+
+```kotlin
+class ChangeAmplitudeFn(parameters: FnInitParameters): Fn<Sample, Sample>(parameters) {
+
+    constructor(factor: Double): this(FnInitParameters().add("factor", factor))
+
+    // good way to extract the `factor`
+    private val factor = initParams.double("factor")
+
+    override fun apply(argument: Sample): Sample {
+        val factor = initParams.double("factor") // bad way to extract the `factor`
+        return argument * factor
+    }
+}
+
 ```
 
 ### FnInitParameters

@@ -7,6 +7,30 @@ parent: WaveBeans
 Release notes
 =========
 
+Version 0.2.0 on 2020-08-12
+------
+
+* [ [#82](https://github.com/WaveBeans/wavebeans/issues/82) ] [Concatenation](/docs/api/operations/concatenation-operation.html) operation
+* File systems support:
+    * File System abstraction for a better support of different location types of operations on files.
+    * DropBox implementation as File System, follow [usage guide](/docs/api/file-systems.html#dropbox-file-system).
+* HTTP Service improvements: 
+    * [ [#62](https://github.com/WaveBeans/wavebeans/issues/62) ] HTTP API improvements. Audio and Table service no longer require some parameters (sampleRate, sourceType) which can be inferred from the table itself.
+    * HTTP service now may stream data out of the table with the help of [Audio Service](/docs/http/index.html#audio-service).
+    * HTTP Service is CORS-enabled
+* Table Output improvements:
+    * If the table is based on finite stream the audio streaming to support the end of the stream as well.
+    * Specific [Table API for Samples and SampleArrays](/docs/api/outputs/table-output.html#sample-type)
+    * Table implementation can now be [provided as a parameter](/docs/api/outputs/table-output.html#custom-table-implementation).
+    * Introduced remote table driver implementation and leveraging it in HTTP service, so now HTTP service may provide access to tables while running in distributed mode. More details in [documentation](/docs/http/index.html#distributed-mode)
+    * Better contextual documentation for Table Output.
+* Other: 
+    * Introduced [SampleArray](/docs/api/index.html#samplearray) type for performance optimization of certain use cases.
+    * [ [#59](https://github.com/WaveBeans/wavebeans/issues/59) ] Switched internal communication to gRPC.
+    * [Bugfix] 24bit wave file storing and fetching hasn't been working properly.
+    * [Bugfix] The table output is not correctly measuring time markers for complex objects 
+    * [Internal] Wav Writer slighly refactored to be more reusable in different parts of the system.
+
 Version 0.1.0 on 2020-05-18
 ------
 

@@ -3,7 +3,7 @@ layout: default
 title: Sine input
 parent: Inputs
 grand_parent: API reference
-nav_order: 5
+nav_order: 6
 ---
 # Sine input
 

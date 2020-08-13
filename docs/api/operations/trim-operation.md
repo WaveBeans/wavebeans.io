@@ -3,7 +3,7 @@ layout: default
 title: Trim operation
 parent: Operations
 grand_parent: API reference
-nav_order: 15
+nav_order: 17
 ---
 Trim operation
 =======

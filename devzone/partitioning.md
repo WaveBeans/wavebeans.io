@@ -2,7 +2,7 @@
 layout: default
 title: Partitioning
 parent: Developer zone
-nav_order: 16
+nav_order: 19
 ---
 Partitioning
 =======

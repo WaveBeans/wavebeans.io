@@ -3,7 +3,7 @@ layout: default
 title: Map with Window function
 parent: Operations
 grand_parent: API reference
-nav_order: 11
+nav_order: 13
 ---
 # Map with Window function
 
