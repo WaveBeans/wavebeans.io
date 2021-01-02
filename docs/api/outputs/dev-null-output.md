@@ -3,7 +3,7 @@ layout: default
 title: Dev-null output
 parent: Outputs
 grand_parent: API reference
-nav_order: 22
+nav_order: 24
 ---
 Dev-null output
 =======

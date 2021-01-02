@@ -3,7 +3,7 @@ layout: default
 title: Time-measure type
 parent: Types
 grand_parent: API reference
-nav_order: 28
+nav_order: 31
 ---
 Time-measure type
 ======

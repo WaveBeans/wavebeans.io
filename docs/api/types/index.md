@@ -3,7 +3,7 @@ layout: default
 title: Types
 parent: API reference
 has_children: true
-nav_order: 27
+nav_order: 30
 ---
 Types
 ========

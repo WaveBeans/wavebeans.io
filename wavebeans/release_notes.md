@@ -7,6 +7,23 @@ parent: WaveBeans
 Release notes
 =========
 
+Version 0.3.0 on 2021-01-02
+------
+
+* **[Breaking changes]** SampleArray renamed to [SampleVector](/docs/api/index.html#samplevector) as well as it has wider API and usage overall.
+* **[Breaking changes]** Now based on Kotlin 1.4. Previous Kotlin versions are not guaranteed to work.
+    * Kotlin 1.4.21
+* [ [#31](https://github.com/WaveBeans/wavebeans/issues/31) ] [Flatten](/docs/api/operations/flatten.html) operation.
+* [ [#86](https://github.com/WaveBeans/wavebeans/issues/86) ] [Managing](/docs/api/index.html#managed-type) and controlling [WAV](/docs/api/outputs/wav-output.html#controlling-output) and [CSV](/docs/api/outputs/csv-outputs.html#controlling-output) outputs
+* [Output as a function](/docs/api/outputs/output-as-a-function.html)
+* [Inverse FFT](/docs/api/operations/fft-operation.html#inverse-fft) implementation
+* [Window functions](/docs/api/operations/fft-operation.html#window-functions) are available as separate convenience functions 
+* [Resample](/docs/api/operations/resample-operation.html) operation
+    * An automatic resampling for [wav-file inputs](/docs/api/inputs/wav-file.html#resampling)
+* Monitoring: metrics system, internal collectors and Prometheus exporter. More in [docs](/docs/ops/monitoring.html). 
+* Improvements on [SampleVector](/docs/api/index.html#samplevector) type, i.e. arithmetic operation with scalars, an operation on two non-nullable vector gets non-nullable result. 
+
+
 Version 0.2.0 on 2020-08-12
 ------
 

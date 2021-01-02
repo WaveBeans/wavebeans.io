@@ -32,6 +32,7 @@ builder --base=$(pwd)/wavebeans/docs/user/api --output=$(pwd)/../docs/api/ --nav
 builder --base=$(pwd)/wavebeans/docs/user/exe --output=$(pwd)/../docs/exe/ --nav-order=4 --support-extensions=png
 builder --base=$(pwd)/wavebeans/docs/user/cli --output=$(pwd)/../docs/cli/ --nav-order=5 --support-extensions=png
 builder --base=$(pwd)/wavebeans/docs/user/http --output=$(pwd)/../docs/http/ --nav-order=6 --support-extensions=png
+builder --base=$(pwd)/wavebeans/docs/user/ops --output=$(pwd)/../docs/ops/ --nav-order=7 --support-extensions=png
 
 # dev zone
 rm wavebeans/docs/dev/doing-release.md # that shouldn't be on web site

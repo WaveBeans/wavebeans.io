@@ -3,7 +3,7 @@ layout: default
 title: Window operation
 parent: Operations
 grand_parent: API reference
-nav_order: 18
+nav_order: 20
 ---
 Window operation
 =====
