@@ -82,7 +82,9 @@ To start working with your DropBox account you'll need to go to its Developer co
 Dropbox filesystem distributed as a separate library, so add it as a dependency, i.e. for gradle:
 
 ```groovy
-implementation "io.wavebeans.filesystems:dropbox:$wavebeans_version"
+dependencies {
+   implementation "io.wavebeans:filesystems-dropbox:$wavebeans_version"
+}
 ```
 
 Then you need to configure the driver. It'll automatically reigster itself under `dropbox` scheme:
