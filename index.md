@@ -25,3 +25,8 @@ Project status
 --------
 
 The project is in active development and considered to be a pre-alpha version. It's not intended yet to be used in critical production systems, though it can be used for a variety of research problems and home labs.
+
+Special thanks
+-------
+
+WaveBeans uses [Java profiler](https://www.ej-technologies.com/products/jprofiler/overview.html) for performance investigations.
