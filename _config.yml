@@ -41,5 +41,6 @@ footer_content: "Copyright &copy; 2020 WaveBeans. Distributed under <a href=\"ht
 
 exclude: 
   - docs-build
+  - vendor
 
 ga_tracking: UA-159312268-1
