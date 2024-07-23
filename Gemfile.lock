@@ -270,6 +270,7 @@ GEM
       thread_safe (~> 0.1)
     unicode-display_width (1.8.0)
     uri (0.13.0)
+    webrick (1.8.1)
     zeitwerk (2.6.16)
 
 PLATFORMS
@@ -290,10 +291,11 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll (~> 3.8.5)
+  jekyll
   jekyll-feed (~> 0.6)
   just-the-docs
   tzinfo-data
+  webrick
 
 BUNDLED WITH
    2.5.16
